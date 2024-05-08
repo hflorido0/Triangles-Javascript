@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="utf-8">
+    <link type="text/css" rel="stylesheet" href="assets/css/style.css" />
+    <title>Triangles</title>
+
+    <!-- Latest compiled and minified CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body>
+    <div class="container m-3 p-4 bg-success bg-opacity-25 rounded-4">
+
+        <h1 class="text-center">Triangles</h1>
+        <div class="row">
+            <div class="col">
+                <form>
+                    <div class="row  align-items-center">
+                        <div class="col-md">
+                            <label class="form-label" for="a">Side 1: </label>
+
+                            <input class="form-control" type="text" name="a" id="a" placeholder="Enter side a"><br />
+                        </div>
+                        <div class="col-md pt-4"> <span id="error"></span>
+                        </div>
+                    </div>
+
+                    <div class="row g-3 align-items-center">
+                        <div class="col-md">
+                            <label class="form-label" for="b">Side 2: </label>
+
+                            <input class="form-control" type="text" name="b" id="b" placeholder="Enter side b"><br />
+                        </div>
+                        <div class="col-md pt-4"> <span id="error"></span>
+                        </div>
+                    </div>
+
+                    <div class="row g-3 align-items-center">
+                        <div class="col-md">
+                            <label class="form-label" for="c">Side 3: </label>
+
+                            <input class="form-control" type="text" name="c" id="c" placeholder="Enter side c"><br />
+                        </div>
+                        <div class="col-md pt-4"> <span id="error"></span>
+                        </div>
+                    </div>
+
+                    <button type="button" class="btn btn-primary mb-3" onclick="execute(document.getElementById('a').value,
+                        document.getElementById('b').value,
+                        document.getElementById('c').value)">Calculate</button><br />
+                    
+                </form>
+            </div>
+            <div class="col mt-4">
+                <canvas id="canvas" class="rounded text-end" width=450" height="450" style="border:1px solid #000;"></canvas>
+
+            </div>
+        </div>
+        <div class="container bg-white rounded p-3"><h3>Results: </h3><span id="result"></span></div>
+
+    </div>
+
+</body>
+<script src="assets/js/app.js"></script>
+
+</html>
